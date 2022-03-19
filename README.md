@@ -51,3 +51,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
  yarn add --dev --exact prettier
 
+
+
+## i18n
+
+https://react.i18next.com/guides/quick-start
+
