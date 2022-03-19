@@ -1,10 +1,7 @@
-import React from 'react';
+import React from "react"
 
 function App() {
-  const a = "a"
-  return (
-    <div className="App">Hello, React!</div>
-  );
+  return <div className="App">Hello, React!</div>
 }
 
-export default App;
+export default App
