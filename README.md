@@ -49,11 +49,41 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## note 
 
- yarn add --dev --exact prettier
+### 代码格式 
+
+yarn add --dev --exact prettier
 
 
 
-## i18n
+### i18n
 
 https://react.i18next.com/guides/quick-start
+
+
+
+### storybook 引入
+
+#### 可能需要一些其它包安装，报错的时候安装下面的几个包。
+
+```shell
+yarn add @babel/core @babel/cli @babel/preset-env
+```
+
+#### 安装 storybook 
+
+```sh
+yarn add storybook
+```
+
+#### storybook 初始化
+
+```
+yarn sb init   
+```
+
+#### 启动 storybook
+
+```
+yarn storybook    
+```
 
