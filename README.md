@@ -49,6 +49,14 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## note 
 
+
+
+### 创建项目
+
+yarn create react-app my-app --template [template-name]
+
+
+
 ### 代码格式 
 
 yarn add --dev --exact prettier
@@ -87,3 +95,8 @@ yarn sb init
 yarn storybook    
 ```
 
+
+
+### chakra-ui
+
+https://chakra-ui.com/

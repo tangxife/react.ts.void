@@ -1,9 +1,16 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
+import { ChakraProvider, Button } from "@chakra-ui/react"
 
 function App() {
-  const { t } = useTranslation()
-  return <div className="App">{t("language")}</div>
+  return (
+    <ChakraProvider>
+      <div className="App">
+        <Button colorScheme="blue" onClick={() => console.log("click button")}>
+          Button
+        </Button>
+      </div>
+    </ChakraProvider>
+  )
 }
 
 export default App
