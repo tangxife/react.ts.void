@@ -1,13 +1,12 @@
 import React from "react"
 import { ChakraProvider, Button } from "@chakra-ui/react"
+import Text from "./components/Text"
 
 function App() {
   return (
     <ChakraProvider>
       <div className="App">
-        <Button colorScheme="blue" onClick={() => console.log("click button")}>
-          Button
-        </Button>
+        <Text textTheme="heading1" />
       </div>
     </ChakraProvider>
   )
