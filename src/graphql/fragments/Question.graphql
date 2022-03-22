@@ -1,0 +1,6 @@
+fragment Question on QuestionInterface {
+    id
+    title
+    purpose
+    isRecommended
+}

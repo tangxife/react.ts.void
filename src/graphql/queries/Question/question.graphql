@@ -4,6 +4,7 @@ query GetQuestions {
             ... on NarrativeQuestion {
                 id
                 title
+                purpose
                 answerExample0
             }
         }
