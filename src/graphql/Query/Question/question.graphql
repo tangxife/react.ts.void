@@ -1,0 +1,11 @@
+query GetQuestions {
+    organization {
+        questions {
+            ... on NarrativeQuestion {
+                id
+                title
+                answerExample0
+            }
+        }
+    }
+}

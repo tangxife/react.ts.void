@@ -1,0 +1,6 @@
+query GetOrganization {
+    organization {
+        name
+        email
+    }
+}

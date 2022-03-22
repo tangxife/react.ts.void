@@ -1,0 +1,16 @@
+overwrite: true
+schema:
+  - "http://localhost:3000/graphql"
+  - "src/graphql/client-schema.graphql"
+documents: "src/graphql/**/*.graphql"
+generates:
+  src/graphql/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      scalars:
+        ISO8601Date: Date
+        ISO8601DateTime: Date
+        JSON: Object
