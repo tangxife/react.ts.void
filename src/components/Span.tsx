@@ -1,6 +1,6 @@
 import React from "react"
 
-import theme from "../theme/theme"
+import theme from "src/theme/theme"
 
 type PropsType = {
   textTheme: "heading1" | "heading2"
