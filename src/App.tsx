@@ -14,7 +14,14 @@ function App() {
       <ChakraProvider>
         <div className="App">
           <Button colorScheme="blue">ChakraButton</Button>
-          <Span textTheme="heading1">test text</Span>
+          <Span textStyle="h1">test text</Span>
+          <Span textStyle="h2">test text</Span>
+          <Span textStyle="h3">test text</Span>
+          <Span textStyle="h4">test text</Span>
+          <Span textStyle="h5">test text</Span>
+          <Span textStyle="h6">test text</Span>
+          <Span textStyle="h6">test text</Span>
+          <Span textStyle="md">test text</Span>
           <ExchangeRates />
         </div>
       </ChakraProvider>
