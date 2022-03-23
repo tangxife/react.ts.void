@@ -1,6 +1,14 @@
+fragment QuestionTag on QuestionTag {
+    id
+    title
+}
+
 fragment Question on QuestionInterface {
     id
     title
     purpose
     isRecommended
+    tags {
+        ...QuestionTag
+    }
 }

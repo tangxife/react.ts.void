@@ -1,12 +1,23 @@
-query GetQuestions {
-    organization {
+query GetCandidateQuestions {
+    myOrganization {
         questions {
-            ... on NarrativeQuestion {
+            nodes {
                 id
                 title
                 purpose
-                answerExample0
+                isRecommended
+                tags {
+                    ...QuestionTag
+                }
             }
+        }
+    }
+}
+
+query GetQuestionTags {
+    myOrganization {
+        questionTags {
+            ...QuestionTag
         }
     }
 }

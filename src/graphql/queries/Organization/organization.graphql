@@ -1,7 +1,11 @@
-query GetOrganization {
-    organization {
+query MyOrganization {
+    myOrganization {
         id
         name
         email
+        phone
+        postalCode
+        address
+        contactName
     }
 }
