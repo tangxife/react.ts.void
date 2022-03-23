@@ -18,8 +18,17 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-    semi: 0,
-    quotes: 2,
-    "no-console": 1
+    indent: ["error", 2],
+    quotes: ["error", "double"],
+    semi: "off",
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "no-empty": "warn",
+    "linebreak-style": ["error", "unix"],
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { vars: "all", args: "after-used", ignoreRestSiblings: false }
+    ]
   }
 }
