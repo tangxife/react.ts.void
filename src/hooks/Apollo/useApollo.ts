@@ -1,10 +1,36 @@
-import { ApolloClient, InMemoryCache, NormalizedCacheObject } from "@apollo/client"
+import {
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+  from,
+  NormalizedCacheObject
+} from "@apollo/client"
+import { setContext } from "@apollo/client/link/context"
 
 export const useApollo = (): {
   client: ApolloClient<NormalizedCacheObject>
 } => {
+  const httpLink = createHttpLink({
+    // todo
+    uri: "/graphql"
+  })
+
+  const authLink = setContext((_, { headers }) => {
+    // get the authentication token from local storage if it exists todo
+    const token = localStorage.getItem("token")
+
+    // return the headers to the context so httpLink can read them todo
+    return {
+      // todo
+      headers: {
+        ...headers,
+        authorization: token ? `Bearer ${token}` : ""
+      }
+    }
+  })
+
   const client = new ApolloClient({
-    uri: "https://48p1r2roz4.sse.codesandbox.io", // TODO server uri
+    link: from([authLink, httpLink]),
     cache: new InMemoryCache()
   })
 
