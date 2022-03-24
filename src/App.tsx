@@ -1,6 +1,7 @@
 import React from "react"
 import { ApolloProvider } from "@apollo/client"
 import { ChakraProvider } from "@chakra-ui/react"
+import RoutesView from "src/pages/RouterView"
 
 import { useApollo } from "src/hooks/Apollo/useApollo"
 
@@ -10,7 +11,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <ChakraProvider>
-        <div className="App">Hello, React!</div>
+        <div className="App">
+          <RoutesView />
+        </div>
       </ChakraProvider>
     </ApolloProvider>
   )
