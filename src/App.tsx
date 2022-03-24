@@ -2,12 +2,14 @@ import React from "react"
 import { ApolloProvider } from "@apollo/client"
 import { ChakraProvider, Button } from "@chakra-ui/react"
 import Text from "./components/Text"
-import ExchangeRates from "./pages/ExchangeRates/ExchangeRates"
 import theme from "./theme/theme"
+import { useTranslation } from "react-i18next"
 
-import { useApollo } from "./hooks/Apollo/useApollo"
+import ExchangeRates from "src/pages/ExchangeRates/ExchangeRates"
+import { useApollo } from "src/hooks/Apollo/useApollo"
 
 function App() {
+  const { t } = useTranslation()
   const { client } = useApollo()
 
   return (
@@ -39,6 +41,7 @@ function App() {
           <Text fontStyle="md" fontColor={theme.Color.Text.text02} as="span">
             test text
           </Text>
+          <Text fontStyle="h1">test text {t("language")}</Text>
           <ExchangeRates />
         </div>
       </ChakraProvider>
