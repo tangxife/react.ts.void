@@ -1,7 +1,7 @@
 import React from "react"
 import { createIcon } from "@chakra-ui/react"
 
-const UpDownIcon = createIcon({
+const HomeIcon = createIcon({
   displayName: "HomeIcon",
   viewBox: "0 0 24 24",
   path: (
@@ -12,4 +12,4 @@ const UpDownIcon = createIcon({
   )
 })
 
-export default UpDownIcon
+export default HomeIcon
