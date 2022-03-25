@@ -1,7 +1,7 @@
 import React from "react"
 import { ApolloProvider } from "@apollo/client"
 import { ChakraProvider } from "@chakra-ui/react"
-import RoutesView from "src/pages/RouterView"
+import RoutesView from "src/pages/RoutesView"
 
 import { useApollo } from "src/hooks/Apollo/useApollo"
 
