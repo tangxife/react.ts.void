@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import AppLayoutUser from "./AppLayoutUser"
-import Candidate from "src/pages/Candidate"
+import Candidate from "src/pages/User/Candidate"
 
 const RoutesView = () => {
   return (
