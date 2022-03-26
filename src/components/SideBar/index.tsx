@@ -13,10 +13,10 @@ import theme from "src/theme/theme"
 
 interface PropsTyps {
   selectedTab: string
-  onSelect: (key: string) => void
+  onTabSelect: (key: string) => void
 }
 
-const SideBar: React.FC<PropsTyps> = ({ selectedTab, onSelect }) => {
+const SideBar: React.FC<PropsTyps> = ({ selectedTab, onTabSelect }) => {
   const sideBarItem = [
     { key: "home", title: "ホーム", icon: <HomeIcon fontSize="24px" /> },
     { key: "candidates", title: "候補者", icon: <CandidateGroupIcon fontSize="24px" /> },
@@ -43,7 +43,7 @@ const SideBar: React.FC<PropsTyps> = ({ selectedTab, onSelect }) => {
               title={item.title}
               isSelected={selectedTab === item.key}
               icon={item.icon}
-              onSelect={onSelect}
+              onSelect={onTabSelect}
             />
             {index === 2 && (
               <Divider width="54px" mt="20px" borderColor={theme.Color.Text.subtext04} borderBottomWidth="2px" />

@@ -11,13 +11,13 @@ type MenuItemType = {
 }
 
 interface PropsType {
-  title?: string
+  pageName?: string
   userName: string
   menuItems?: MenuItemType[]
   onMenuSelect?: (key: string) => void
 }
 
-const Header: React.FC<PropsType> = ({ title, userName, menuItems, onMenuSelect }) => {
+const Header: React.FC<PropsType> = ({ pageName, userName, menuItems, onMenuSelect }) => {
   const handleMenuSelect = (key: string) => {
     if (onMenuSelect) {
       onMenuSelect(key)
@@ -28,9 +28,9 @@ const Header: React.FC<PropsType> = ({ title, userName, menuItems, onMenuSelect 
 
   return (
     <Flex w="1354px" h="72px" bg={theme.Color.Bg.bg_01} alignItems="center">
-      {title && (
+      {pageName && (
         <Box marginLeft="36px">
-          <Text fontStyle="h3">{title}</Text>
+          <Text fontStyle="h3">{pageName}</Text>
         </Box>
       )}
       <Spacer />
