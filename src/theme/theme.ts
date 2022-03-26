@@ -41,6 +41,9 @@ const theme = {
       BK10: "#E9ECF0",
       BK5: "#F3F5F7"
     }
+  },
+  Border: {
+    border_01: "2px solid #E9ECF0"
   }
 }
 
