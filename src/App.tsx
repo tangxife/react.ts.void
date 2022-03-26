@@ -3,7 +3,7 @@ import { ApolloProvider } from "@apollo/client"
 import { ChakraProvider } from "@chakra-ui/react"
 import RoutesView from "src/pages/RoutesView"
 
-import { useApollo } from "src/hooks/Apollo/useApollo"
+import { useApollo } from "src/hooks/apollo/useApollo"
 
 function App() {
   const { client } = useApollo()
