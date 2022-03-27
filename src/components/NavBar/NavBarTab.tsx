@@ -8,15 +8,12 @@ import theme from "src/theme/theme"
 interface PropsType {
   id: string
   isSelected: boolean
-  path: string
   title: string
   icon: JSX.Element
   onSelect: (key: string) => void
 }
 
-const NavBarTab: React.FC<PropsType> = ({ id, isSelected, path, title, icon, onSelect }) => {
-  console.log(path)
-
+const NavBarTab: React.FC<PropsType> = ({ id, isSelected, title, icon, onSelect }) => {
   return (
     <Box
       m="22px auto !important"

@@ -5,11 +5,13 @@ import NavBar from "src/components/NavBar"
 import Header from "src/components/Header"
 
 import { userRoute } from "src/pages/RoutesView/routes"
+import Home from "../User/Home"
 
 const AppLayoutUser: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const key = location.pathname.split("/").pop()
   const userName = "エッグフォワード中途採用担当者様"
   const [pageName, setPageName] = useState<string>("")
 
@@ -27,18 +29,15 @@ const AppLayoutUser: React.FC = () => {
   }
 
   const selectedTab = useMemo(() => {
-    const key = location.pathname.split("/").pop()
     return key === "" || key === "user" ? "home" : key ?? "home"
-  }, [location.pathname])
+  }, [key])
 
   return (
     <Flex flexDirection="row">
       <NavBar selectedTab={selectedTab ?? "home"} onTabSelect={haneleTabSelect} />
       <Flex flexDirection="column" mt="0px" justify="start">
         <Header pageName={pageName} userName={userName} onMenuSelect={handleMenuSelect} />
-        <Box>
-          <Outlet />
-        </Box>
+        <Box>{key === "" || key === "user" ? <Home /> : <Outlet />}</Box>
       </Flex>
     </Flex>
   )

@@ -7,14 +7,19 @@ const RoutesView = () => {
 
   const generateRoutesView = (routes: RouteType[]) => {
     return routes.map((r) => {
-      return r.default ? (
-        <>
-          <Route key="default" index element={r.element} />
-          <Route key={r.key} path={r.path} element={r.element}>
-            {r.routes && generateRoutesView(r.routes)}
-          </Route>
-        </>
-      ) : (
+      // return r.default ? (
+      //   <>
+      //     <Route key="default" index element={r.element} />
+      //     <Route key={r.key} path={r.path} element={r.element}>
+      //       {r.routes && generateRoutesView(r.routes)}
+      //     </Route>
+      //   </>
+      // ) : (
+      //   <Route key={r.key} path={r.path} element={r.element}>
+      //     {r.routes && generateRoutesView(r.routes)}
+      //   </Route>
+      // )
+      return (
         <Route key={r.key} path={r.path} element={r.element}>
           {r.routes && generateRoutesView(r.routes)}
         </Route>

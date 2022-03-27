@@ -30,7 +30,6 @@ const NavBar: React.FC<PropsTyps> = ({ selectedTab, onTabSelect }) => {
           <Box key={route.key} mt="0px !important">
             <NavBarTab
               id={route.key}
-              path={route.path}
               title={route.navLink.title}
               isSelected={selectedTab === route.key}
               icon={route.navLink.icon}
