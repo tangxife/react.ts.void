@@ -1,7 +1,7 @@
 import React from "react"
 
-const Question: React.FC = () => {
+const Questions: React.FC = () => {
   return <>Question</>
 }
 
-export default Question
+export default Questions

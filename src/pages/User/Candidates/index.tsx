@@ -1,18 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
-const Candidate: React.FC = () => {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>That feels like an existential question, don't you think?</p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
-  )
+const Candidates: React.FC = () => {
+  return <>Candidates</>
 }
 
-export default Candidate
+export default Candidates

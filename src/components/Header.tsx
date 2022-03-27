@@ -5,19 +5,18 @@ import Text from "./Text"
 
 import theme from "src/theme/theme"
 
-type MenuItemType = {
-  key: string
-  menuTitle: string
-}
-
 interface PropsType {
   pageName?: string
   userName: string
-  menuItems?: MenuItemType[]
   onMenuSelect?: (key: string) => void
 }
 
-const Header: React.FC<PropsType> = ({ pageName, userName, menuItems, onMenuSelect }) => {
+const Header: React.FC<PropsType> = ({ pageName, userName, onMenuSelect }) => {
+  const menuItems = [
+    { key: "logout", menuTitle: "ログアウト" },
+    { key: "other", menuTitle: "その他" }
+  ]
+
   const handleMenuSelect = (key: string) => {
     if (onMenuSelect) {
       onMenuSelect(key)

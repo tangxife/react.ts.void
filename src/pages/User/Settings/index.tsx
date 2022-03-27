@@ -1,7 +1,7 @@
 import React from "react"
 
-const Setting: React.FC = () => {
+const Settings: React.FC = () => {
   return <>Setting</>
 }
 
-export default Setting
+export default Settings
