@@ -1,16 +1,16 @@
 import React from "react"
 import Input from "src/components/Input"
-import { FormControl, FormControlProps, FormLabel } from "@chakra-ui/react"
+import { FormControl, FormLabel } from "@chakra-ui/react"
 import theme from "src/theme/theme"
 
-type PropsType = FormControlProps & {
+type PropsType = {
   label?: string
   inputType: "name" | "email" | "password"
   value?: string
   onInputChange?: (value: string) => void
 }
 
-const FormInput: React.FC<PropsType> = ({ label, inputType, onInputChange, value, ...otherProps }) => {
+const FormInput: React.FC<PropsType> = ({ label, inputType, onInputChange, value }) => {
   const formLabelStyle = {
     fontFamily: "Noto Sans JP",
     fontStyle: "normal",
@@ -21,7 +21,7 @@ const FormInput: React.FC<PropsType> = ({ label, inputType, onInputChange, value
   }
 
   return (
-    <FormControl {...otherProps}>
+    <FormControl isRequired>
       {label && (
         <FormLabel htmlFor={inputType} {...formLabelStyle}>
           {label}

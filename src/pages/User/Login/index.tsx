@@ -20,14 +20,12 @@ const Login: React.FC = () => {
         <Box mt="60px" textAlign="center">
           <Text fontStyle="h3">track</Text>
         </Box>
-        <FormInput m="45px 40px 0px" inputType="email" label="メールアドレス" onInputChange={setEmail} value={email} />
-        <FormInput
-          m="16px 40px 0px"
-          inputType="password"
-          label="パスワード"
-          onInputChange={setPassword}
-          value={password}
-        />
+        <Box m="45px 40px 0px">
+          <FormInput label="メールアドレス" inputType="email" onInputChange={setEmail} value={email} />
+        </Box>
+        <Box m="16px 40px 0px">
+          <FormInput label="パスワード" inputType="password" onInputChange={setPassword} value={password} />
+        </Box>
         <Button buttonSchema="primary1" w="320px" h="40px" m="30px 40px 0px" onClick={handleSignIn}>
           サインインする
         </Button>
