@@ -31,6 +31,7 @@ type PropsType = {
   as?: "span" | "p"
 }
 
+// todo refactory: 兼容 chakra-ui 的 Text 属性
 const Text: React.FC<PropsType> = ({ fontStyle, fontColor, children, as }) => {
   const commonStyle = {
     fontFamily: "Noto Sans JP",

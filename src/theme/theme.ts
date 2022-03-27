@@ -6,6 +6,7 @@ const theme = {
     },
     Primary: {
       primary: "#0064FE",
+      primary2: "#E6F0FF",
       light_blue_1: "#E8F4FF",
       light_blue_2: "#D7ECFF"
     },
@@ -14,6 +15,7 @@ const theme = {
       error_text: "#F52419"
     },
     Text: {
+      white: "#FFFFFF",
       text01: "#192434",
       text02: "#263446",
       subtext01: "#5A6676",
@@ -25,6 +27,7 @@ const theme = {
       yellow: "#FFBF1A",
       green: "#1AB888",
       dark_blue: "#15357A",
+      dark_blue2: "#CFDCEF",
       dark_red: "#D2352D"
     },
     Overlay: "rgba(25, 36, 52, 0.4)",
@@ -43,7 +46,9 @@ const theme = {
     }
   },
   Border: {
-    border_01: "2px solid #E9ECF0"
+    border_01: "2px solid #E9ECF0",
+    border_02: "1px solid #DADADA",
+    border_03: "1px solid #5A6676"
   }
 }
 
