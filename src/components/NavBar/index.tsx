@@ -3,7 +3,7 @@ import { VStack, Avatar, Box, Divider, Spacer } from "@chakra-ui/react"
 import HelpIcon from "src/components/Icons/HelpIcon"
 import Text from "src/components/Text"
 import NavBarTab from "./NavBarTab"
-import { userRoute } from "src/hooks/route/routes"
+import { userRoute } from "src/pages/RoutesView/routes"
 
 import theme from "src/theme/theme"
 

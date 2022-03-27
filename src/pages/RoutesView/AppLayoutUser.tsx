@@ -4,7 +4,7 @@ import { Box, Flex } from "@chakra-ui/react"
 import NavBar from "src/components/NavBar"
 import Header from "src/components/Header"
 
-import { userRoute } from "src/hooks/route/routes"
+import { userRoute } from "src/pages/RoutesView/routes"
 
 const AppLayoutUser: React.FC = () => {
   const location = useLocation()
