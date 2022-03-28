@@ -2,18 +2,31 @@ import React from "react"
 import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react"
 import theme from "src/theme/theme"
 
-type PropsType = ButtonProps & {
-  buttonSchema?: "primary1" | "primary2" | "secondary" | "text" | "nagative"
+type ButtonPropsWithSchema = Omit<
+  ButtonProps,
+  | "size"
+  | "borderRadius"
+  | "fontFamily"
+  | "fontStyle"
+  | "fontWeight"
+  | "fontSize"
+  | "lineHeight"
+  | "color"
+  | "bg"
+  | "_hover"
+> & {
+  buttonSchema: "primary1" | "primary2" | "secondary" | "text" | "nagative"
 }
 
-const Button: React.FC<PropsType> = ({ buttonSchema, isDisabled, children, ...otherProps }) => {
-  if (!buttonSchema) {
-    return (
-      <ChakraButton isDisabled={isDisabled} {...otherProps}>
-        {children}
-      </ChakraButton>
-    )
+type PropsType = ButtonPropsWithSchema | ButtonProps
+
+const Button: React.FC<PropsType> = (props) => {
+  if (!(props as ButtonPropsWithSchema).buttonSchema) {
+    const { children, ...rest } = props
+    return <ChakraButton {...rest}>{children}</ChakraButton>
   }
+
+  const { buttonSchema, isDisabled, children, ...rest } = props as ButtonPropsWithSchema
 
   const commonStyle = {
     size: "md",
@@ -62,9 +75,9 @@ const Button: React.FC<PropsType> = ({ buttonSchema, isDisabled, children, ...ot
   }
 
   // todo
-  const renderButton = (props: ButtonProps) => {
+  const renderButton = (customiseStyle: ButtonProps) => {
     return (
-      <ChakraButton {...props} {...otherProps}>
+      <ChakraButton {...customiseStyle} {...rest}>
         {children}
       </ChakraButton>
     )

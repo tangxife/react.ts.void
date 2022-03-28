@@ -19,7 +19,7 @@ const AppLayoutUser: React.FC = () => {
     console.log("select menu: ", key)
   }
 
-  const haneleTabSelect = (key: string) => {
+  const handleTabSelect = (key: string) => {
     const route = userRoute.routes.find((r) => r.key === key)
 
     if (route) {
@@ -34,8 +34,8 @@ const AppLayoutUser: React.FC = () => {
 
   return (
     <Flex flexDirection="row">
-      <NavBar selectedTab={selectedTab ?? "home"} onTabSelect={haneleTabSelect} />
-      <Flex flexDirection="column" mt="0px" justify="start">
+      <NavBar selectedTab={selectedTab ?? "home"} onTabSelect={handleTabSelect} />
+      <Flex flexDirection="column" flexGrow={1} mt="0px" justify="start">
         <Header pageName={pageName} userName={userName} onMenuSelect={handleMenuSelect} />
         <Box>{key === "" || key === "user" ? <Home /> : <Outlet />}</Box>
       </Flex>

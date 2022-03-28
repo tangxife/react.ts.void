@@ -3,8 +3,6 @@ import { Box } from "@chakra-ui/react"
 import Text from "src/components/Text"
 import theme from "src/theme/theme"
 
-// import { NavLink } from "react-router-dom"
-
 interface PropsType {
   id: string
   isSelected: boolean

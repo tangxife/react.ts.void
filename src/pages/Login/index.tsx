@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { Box, Flex } from "@chakra-ui/react"
 import { Formik, Form } from "formik"
 import Text from "src/components/Text"
@@ -13,7 +13,7 @@ type InputValuesType = {
 }
 
 const Login: React.FC = () => {
-  const handleValidate = ({ email, password }: InputValuesType) => {
+  const handleValidate = useCallback(({ email, password }: InputValuesType) => {
     const errors = { email: "", password: "" }
 
     if (!email) {
@@ -26,14 +26,12 @@ const Login: React.FC = () => {
       errors.password = "Required"
     }
 
-    console.log(errors)
-
     if (errors.email !== "" || errors.password !== "") return errors
-  }
+  }, [])
 
-  const handleSignin = ({ email, password }: InputValuesType) => {
+  const handleSignin = useCallback(({ email, password }: InputValuesType) => {
     console.log("handleSignin: ", email, password)
-  }
+  }, [])
 
   return (
     <Flex w="100VW" h="100VH" bg={theme.Color.Bg.bg_02}>
@@ -63,8 +61,8 @@ const Login: React.FC = () => {
                 />
               </Box>
               <Button
-                type="submit"
                 buttonSchema="primary1"
+                type="submit"
                 w="320px"
                 h="40px"
                 m="30px 40px 0px"
