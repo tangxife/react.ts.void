@@ -3,10 +3,18 @@ import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react"
 import theme from "src/theme/theme"
 
 type PropsType = ButtonProps & {
-  buttonSchema: "primary1" | "primary2" | "secondary" | "text" | "nagative"
+  buttonSchema?: "primary1" | "primary2" | "secondary" | "text" | "nagative"
 }
 
 const Button: React.FC<PropsType> = ({ buttonSchema, isDisabled, children, ...otherProps }) => {
+  if (!buttonSchema) {
+    return (
+      <ChakraButton isDisabled={isDisabled} {...otherProps}>
+        {children}
+      </ChakraButton>
+    )
+  }
+
   const commonStyle = {
     size: "md",
     borderRadius: "3px",
