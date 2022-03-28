@@ -4,6 +4,8 @@ import { Box } from "@chakra-ui/react"
 import Button from "src/components/Button"
 import FormInput from "./FormInput"
 
+import { useUserLoginMutation } from "src/graphql/generated/graphql"
+
 type InputValuesType = {
   email: string
   password: string
@@ -26,13 +28,18 @@ const LoginForm: React.FC = () => {
     if (errors.email !== "" || errors.password !== "") return errors
   }, [])
 
+  const [userLoginMutation] = useUserLoginMutation()
+
   const handleSignin = useCallback(({ email, password }: InputValuesType) => {
     console.log("handleSignin: ", email, password)
+    userLoginMutation({ variables: { email, password } }).then((res) => {
+      console.log(res)
+    })
   }, [])
 
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
+      initialValues={{ email: "em@email.com", password: "111111" }}
       validate={handleValidate}
       onSubmit={(values, { setSubmitting }) => {
         handleSignin(values)
