@@ -2,7 +2,7 @@ import React from "react"
 import AppLayoutUser from "src/pages/RoutesView/AppLayoutUser"
 import AppLayoutCandidate from "src/pages/RoutesView/AppLayoutCandidate"
 import AppLayoutReferrer from "src/pages/RoutesView/AppLayoutReferrer"
-import Login from "src/pages/Login"
+import Login from "src/pages/User/Login"
 import Home from "src/pages/User/Home"
 import Candidates from "src/pages/User/Candidates"
 import Questions from "src/pages/User/Questions"
@@ -46,7 +46,7 @@ export const rootRoute = {
   ]
 }
 
-export const loginRoute = { key: "login", path: "/login", element: <Login /> }
+export const loginRoute = { key: "login", path: "/user/login", element: <Login /> }
 
 export const userRoute = {
   key: "user",
