@@ -32,21 +32,14 @@ export type RouteType = {
 export const rootRoute = {
   key: "root",
   path: "/",
-  element: <AppLayoutUser />,
-  // todo 需要这个吗？
-  routes: [
-    {
-      key: "home",
-      path: "/home",
-      pageName: "",
-      navLink: { title: "ホーム", icon: <HomeIcon fontSize="24px" /> },
-      element: <Home />,
-      default: true
-    }
-  ]
+  element: <AppLayoutUser />
 }
 
-export const loginRoute = { key: "login", path: "/user/login", element: <Login /> }
+export const loginRoute = {
+  key: "login",
+  path: "/user/login",
+  element: <Login />
+}
 
 export const userRoute = {
   key: "user",
@@ -92,5 +85,14 @@ export const userRoute = {
   ]
 }
 
-export const candidateRoute = { key: "candidate", path: "/candidate", element: <AppLayoutCandidate /> }
-export const referrerRoute = { key: "referrer", path: "/referrer", element: <AppLayoutReferrer /> }
+export const candidateRoute = {
+  key: "candidate",
+  path: "/candidate",
+  element: <AppLayoutCandidate />
+}
+
+export const referrerRoute = {
+  key: "referrer",
+  path: "/referrer",
+  element: <AppLayoutReferrer />
+}

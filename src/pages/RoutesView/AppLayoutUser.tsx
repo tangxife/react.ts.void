@@ -3,9 +3,10 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom"
 import { Box, Flex } from "@chakra-ui/react"
 import NavBar from "src/components/NavBar"
 import Header from "src/components/Header"
+import Home from "src/pages/User/Home"
 
-import { userRoute } from "src/pages/RoutesView/routes"
-import Home from "../User/Home"
+import useSignout from "src/hooks/auth/useSignout"
+import { userRoute } from "src/hooks/route/routes"
 
 const AppLayoutUser: React.FC = () => {
   const location = useLocation()
@@ -15,8 +16,14 @@ const AppLayoutUser: React.FC = () => {
   const userName = "エッグフォワード中途採用担当者様"
   const [pageName, setPageName] = useState<string>("")
 
+  const [signOut] = useSignout()
+
   const handleMenuSelect = (key: string) => {
-    console.log("select menu: ", key)
+    if (key === "logout") {
+      signOut().catch(() => {
+        console.log("signout error")
+      })
+    }
   }
 
   const handleTabSelect = (key: string) => {

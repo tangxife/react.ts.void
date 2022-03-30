@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react"
 import Button from "src/components/Button"
 import FormInput from "./FormInput"
 
-import useSignin from "src/hooks/apollo/useSignin"
+import useSignin from "src/hooks/auth/useSignin"
 
 type InputValuesType = {
   email: string
@@ -30,10 +30,14 @@ const LoginForm: React.FC = () => {
 
   const [signIn] = useSignin()
 
-  const handleSignin = useCallback(({ email, password }: InputValuesType) => {
-    console.log("handleSignin: ", email, password)
-    signIn(email, password)
-  }, [])
+  const handleSignin = useCallback(
+    ({ email, password }: InputValuesType) => {
+      signIn(email, password).catch(() => {
+        console.log("signin error")
+      })
+    },
+    [signIn]
+  )
 
   return (
     <Formik
