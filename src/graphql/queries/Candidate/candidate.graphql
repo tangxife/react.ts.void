@@ -1,0 +1,9 @@
+query GetCandidates {
+    myOrganization {
+        candidates {
+            nodes {
+                ...Candidate
+            }
+        }
+    }
+}

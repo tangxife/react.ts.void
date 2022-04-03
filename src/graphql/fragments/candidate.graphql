@@ -1,0 +1,6 @@
+fragment Candidate on Candidate {
+    id
+    name
+    answerDeadline
+    jobTitle
+}

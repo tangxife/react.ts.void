@@ -3,31 +3,23 @@ import { Box, Flex, Input, InputGroup, InputRightElement, Spacer } from "@chakra
 import { SearchIcon } from "@chakra-ui/icons"
 import Button from "src/components/Button"
 import StatusTabs from "./StatusTabs"
-
 import theme from "src/theme/theme"
 
 type PropsType = {
-  onFilter: () => void
+  onSearchInputChange: (value: string) => void
+  onTabSelected: (tabSelected: string) => void
 }
 
-const CandidateFilter: React.FC<PropsType> = ({ onFilter }) => {
+const CandidateFilter: React.FC<PropsType> = ({ onTabSelected, onSearchInputChange }) => {
   const [selectedTab, setSelectedTab] = useState<string>("all")
 
   const handleTabSelect = useCallback(
     (key: string) => {
       setSelectedTab(key)
-      onFilter()
+      onTabSelected(key)
     },
     [setSelectedTab]
   )
-
-  const handleInputChange = useCallback((value: string) => {
-    console.log(value)
-  }, [])
-
-  const handleSearch = useCallback(() => {
-    onFilter()
-  }, [])
 
   return (
     <Flex flexDirection="row" w="100%">
@@ -44,13 +36,12 @@ const CandidateFilter: React.FC<PropsType> = ({ onFilter }) => {
             type="text"
             fontSize="16px"
             placeholder="候補者名で検索"
-            // value=""
             onChange={(e) => {
-              handleInputChange(e.target.value)
+              onSearchInputChange(e.target.value)
             }}
           />
           <InputRightElement width="2.5rem">
-            <SearchIcon color={theme.Color.Text.subtext03} onClick={handleSearch} />
+            <SearchIcon color={theme.Color.Text.subtext03} />
           </InputRightElement>
         </InputGroup>
       </Box>
