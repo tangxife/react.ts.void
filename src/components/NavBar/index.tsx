@@ -16,14 +16,7 @@ const NavBar: React.FC<PropsTyps> = ({ selectedTab, onTabSelect }) => {
   const sideBarRoutes = userRoute.routes
 
   return (
-    <VStack
-      w="86px"
-      h="100%"
-      minHeight="100vh"
-      borderRight="2px"
-      borderColor={theme.Color.Shade.BK16}
-      bg={theme.Color.Bg.bg_01}
-    >
+    <VStack w="86px" minHeight="100vh" borderRight="2px" borderColor={theme.Color.Shade.BK16} bg={theme.Color.Bg.bg_01}>
       <Avatar w="32px" h="32px" m="27px 27px 44px 27px" name="T" bg={theme.Color.Primary.primary} />
       {sideBarRoutes.map((route, index) => {
         return (

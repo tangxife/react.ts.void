@@ -21,7 +21,7 @@ const Header: React.FC<PropsType> = ({ pageName, userName, onMenuSelect }) => {
     if (onMenuSelect) {
       onMenuSelect(key)
     } else {
-      console.log("men clicked!")
+      console.log("menu clicked!")
     }
   }
 

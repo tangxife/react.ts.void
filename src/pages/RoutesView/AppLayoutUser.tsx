@@ -42,9 +42,9 @@ const AppLayoutUser: React.FC = () => {
   return (
     <Flex flexDirection="row">
       <NavBar selectedTab={selectedTab ?? "home"} onTabSelect={handleTabSelect} />
-      <Flex flexDirection="column" flexGrow={1} mt="0px" justify="start">
+      <Flex flexDirection="column" w="100vw" minH="100vh" mt="0px" justify="start">
         <Header pageName={pageName} userName={userName} onMenuSelect={handleMenuSelect} />
-        <Box>{key === "" || key === "user" ? <Home /> : <Outlet />}</Box>
+        <Box flex="1">{key === "" || key === "user" ? <Home /> : <Outlet />}</Box>
       </Flex>
     </Flex>
   )
