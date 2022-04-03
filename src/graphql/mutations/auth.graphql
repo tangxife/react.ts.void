@@ -7,3 +7,13 @@ mutation UserLogin($email: String!, $password: String!) {
         }
     }
 }
+
+mutation UserLogout {
+    userLogout {
+        authenticatable {
+            id
+            email
+        }
+    }
+}
+

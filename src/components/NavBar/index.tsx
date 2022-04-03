@@ -3,7 +3,7 @@ import { VStack, Avatar, Box, Divider, Spacer } from "@chakra-ui/react"
 import HelpIcon from "src/components/Icons/HelpIcon"
 import Text from "src/components/Text"
 import NavBarTab from "./NavBarTab"
-import { userRoute } from "src/pages/RoutesView/routes"
+import { userRoute } from "src/hooks/route/routes"
 
 import theme from "src/theme/theme"
 
@@ -16,14 +16,7 @@ const NavBar: React.FC<PropsTyps> = ({ selectedTab, onTabSelect }) => {
   const sideBarRoutes = userRoute.routes
 
   return (
-    <VStack
-      w="86px"
-      h="100%"
-      minHeight="100vh"
-      borderRight="2px"
-      borderColor={theme.Color.Shade.BK16}
-      bg={theme.Color.Bg.bg_01}
-    >
+    <VStack w="86px" minHeight="100vh" borderRight="2px" borderColor={theme.Color.Shade.BK16} bg={theme.Color.Bg.bg_01}>
       <Avatar w="32px" h="32px" m="27px 27px 44px 27px" name="T" bg={theme.Color.Primary.primary} />
       {sideBarRoutes.map((route, index) => {
         return (

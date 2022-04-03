@@ -2,7 +2,7 @@ import React from "react"
 import AppLayoutUser from "src/pages/RoutesView/AppLayoutUser"
 import AppLayoutCandidate from "src/pages/RoutesView/AppLayoutCandidate"
 import AppLayoutReferrer from "src/pages/RoutesView/AppLayoutReferrer"
-import Login from "src/pages/Login"
+import Login from "src/pages/User/Login"
 import Home from "src/pages/User/Home"
 import Candidates from "src/pages/User/Candidates"
 import Questions from "src/pages/User/Questions"
@@ -32,21 +32,14 @@ export type RouteType = {
 export const rootRoute = {
   key: "root",
   path: "/",
-  element: <AppLayoutUser />,
-  // todo 需要这个吗？
-  routes: [
-    {
-      key: "home",
-      path: "/home",
-      pageName: "",
-      navLink: { title: "ホーム", icon: <HomeIcon fontSize="24px" /> },
-      element: <Home />,
-      default: true
-    }
-  ]
+  element: <AppLayoutUser />
 }
 
-export const loginRoute = { key: "login", path: "/login", element: <Login /> }
+export const loginRoute = {
+  key: "login",
+  path: "/user/login",
+  element: <Login />
+}
 
 export const userRoute = {
   key: "user",
@@ -92,5 +85,14 @@ export const userRoute = {
   ]
 }
 
-export const candidateRoute = { key: "candidate", path: "/candidate", element: <AppLayoutCandidate /> }
-export const referrerRoute = { key: "referrer", path: "/referrer", element: <AppLayoutReferrer /> }
+export const candidateRoute = {
+  key: "candidate",
+  path: "/candidate",
+  element: <AppLayoutCandidate />
+}
+
+export const referrerRoute = {
+  key: "referrer",
+  path: "/referrer",
+  element: <AppLayoutReferrer />
+}

@@ -18,6 +18,7 @@ const theme = {
       white: "#FFFFFF",
       text01: "#192434",
       text02: "#263446",
+      text03: "#132239",
       subtext01: "#5A6676",
       subtext02: "#77828F",
       subtext03: "#8D97A4",
@@ -48,7 +49,8 @@ const theme = {
   Border: {
     border_01: "2px solid #E9ECF0",
     border_02: "1px solid #DADADA",
-    border_03: "1px solid #5A6676"
+    border_03: "1px solid #5A6676",
+    border_04: "3px solid #0064FE"
   }
 }
 

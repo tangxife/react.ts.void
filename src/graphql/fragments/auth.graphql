@@ -1,0 +1,5 @@
+fragment Credential on Credential {
+    uid
+    accessToken
+    client
+}

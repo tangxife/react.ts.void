@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { RouteType, rootRoute, loginRoute, userRoute, candidateRoute, referrerRoute } from "src/pages/RoutesView/routes"
+import { RouteType, rootRoute, loginRoute, userRoute, candidateRoute, referrerRoute } from "src/hooks/route/routes"
 
 const RoutesView = () => {
   const routes = [rootRoute, loginRoute, userRoute, candidateRoute, referrerRoute]
