@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module"
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "react-hooks", "@typescript-eslint"],
   rules: {
     quotes: ["error", "double"],
     semi: "off",
@@ -21,7 +21,8 @@ module.exports = {
     "no-empty": "warn",
     "react/no-unescaped-entities": ["off"],
     "linebreak-style": ["error", "unix"],
-    // "@typescript-eslint/explicit-function-return-type": "warn"
-    "@typescript-eslint/no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: false }]
+    "@typescript-eslint/no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: false }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
