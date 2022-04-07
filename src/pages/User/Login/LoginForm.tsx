@@ -41,7 +41,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <Formik
-      initialValues={{ email: "tester@test.com", password: "111111" }}
+      initialValues={{ email: "me@email.com", password: "111111" }}
       validate={handleValidate}
       onSubmit={(values, { setSubmitting }) => {
         handleSignin(values)

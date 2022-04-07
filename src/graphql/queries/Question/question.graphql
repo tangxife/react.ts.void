@@ -1,13 +1,11 @@
 query GetQuestions {
-    myOrganization {
+    organization {
         questions {
-            nodes {
-                ...on NarrativeQuestion {
-                    id
-                    title
-                    purpose
-                    answerExample0
-                }
+            ...on NarrativeQuestion {
+                id
+                title
+                purpose
+                answerExample0
             }
         }
     }

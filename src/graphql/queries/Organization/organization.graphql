@@ -1,5 +1,5 @@
 query GetOrganization {
-    myOrganization {
+    organization {
         id
         name
         email
