@@ -4,7 +4,7 @@ import TrashIcon from "src/components/Icons/TrashIcon"
 import Text from "src/components/Text"
 import theme from "src/theme/theme"
 
-import { CandidateFragment } from "src/graphql/generated/graphql"
+import { CandidateFragment } from "src/apollo/generated/graphql"
 
 type CandidateWithChecked = CandidateFragment & { isChecked: boolean }
 

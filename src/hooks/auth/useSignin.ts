@@ -1,6 +1,6 @@
 import { useCallback } from "react"
 import { useNavigate } from "react-router-dom"
-import { useUserLoginMutation, CredentialFragment } from "src/graphql/generated/graphql"
+import { useUserLoginMutation, CredentialFragment } from "src/apollo/generated/graphql"
 import { Key, setItem } from "src/utils/localstorages"
 
 import { userRoute } from "src/hooks/route/routes"

@@ -1,6 +1,6 @@
 import { useCallback } from "react"
 import { useNavigate } from "react-router-dom"
-import { useUserLogoutMutation } from "src/graphql/generated/graphql"
+import { useUserLogoutMutation } from "src/apollo/generated/graphql"
 
 import { Key, removeItem } from "src/utils/localstorages"
 import { loginRoute } from "src/hooks/route/routes"

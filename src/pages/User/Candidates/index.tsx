@@ -4,7 +4,7 @@ import CandidateFilter from "./CandidateFilter"
 import CandidateList from "./CandidateList"
 import theme from "src/theme/theme"
 
-import { CandidateFragment, useGetCandidatesQuery } from "src/graphql/generated/graphql"
+import { CandidateFragment, useGetCandidatesQuery } from "src/apollo/generated/graphql"
 
 const Candidates: React.FC = () => {
   const [searchText, setSearchText] = useState<string>()

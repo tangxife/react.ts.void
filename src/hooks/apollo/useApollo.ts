@@ -1,8 +1,8 @@
 import { ApolloClient, InMemoryCache, createHttpLink, from, NormalizedCacheObject } from "@apollo/client"
 import { setContext } from "@apollo/client/link/context"
 import { onError } from "@apollo/client/link/error"
-import { CredentialFragment } from "src/graphql/generated/graphql"
-// import apiErrorsVar, { ApiErrorType } from "src/graphql/cache/apiErrors";
+import { CredentialFragment } from "src/apollo/generated/graphql"
+// import apiErrorsVar, { ApiErrorType } from "src/apollo/cache/apiErrors"; todo
 
 import { Key, getItem } from "src/utils/localstorages"
 
